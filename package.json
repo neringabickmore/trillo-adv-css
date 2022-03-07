@@ -1,21 +1,21 @@
 {
-  "name": "natours",
+  "name": "Trillo",
   "version": "1.0.0",
-  "description": "Landing page for natours",
+  "description": "Trillo app",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
-    "concat:css": "concat -o css/main.compiled.css css/icon-font.css css/main.css",
-    "compress:css": "node-sass css/main.compiled.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all concat:css compress:css"
+
+    "compress:css": "node-sass css/main.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compress:css"
   },
-  "author": "Jonas",
+  "author": "Neringa Bickmore",
   "license": "ISC",
   "devDependencies": {
     "concat": "^1.0.3",
     "node-sass": "^4.5.3",
-    "npm-run-all": "^4.1.1",
+    "npm-run-all": "^4.1.1"
   }
 }
