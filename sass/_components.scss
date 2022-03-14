@@ -178,10 +178,58 @@
 }
 
 // Legal
-
 .legal {
     font-size: 1.2rem;
     color: var(--color-grey-light-1);
     text-align: center;
     padding: 2.5rem;
+}
+
+// Gallery
+.gallery {
+    display: flex;
+
+    &__photo {
+        // define image width in % to ensure fluidity
+        width: 100%;
+        // eliminates white space at the bottom when set to block
+        display: block;
+    }
+
+}
+// Hotel overview
+.overview {
+    display: flex;
+
+    &__heading {
+
+    }
+
+    &__stars {
+        // occupies the space needed, used with flexbox
+        margin-right: auto;
+
+    }
+
+    &__icon-star,
+    &__icon-location {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: var(--color-primary);
+    }
+
+    &__location {
+
+    }
+
+    &__rating {
+
+    }
+    &__rating-average {
+
+    }
+
+    &__rating-count {
+
+    }
 }
