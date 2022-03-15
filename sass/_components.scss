@@ -12,6 +12,13 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-x-small) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+
+    }
+
     &__input {
         font-family: inherit;
         font-size: inherit;
@@ -118,12 +125,25 @@
     list-style: none;
     margin-top: 3.5rem;
 
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        margin: 0;
+    }
+
     &__item {
 
         position: relative;
 
         &:not(:last-child) {
             margin-bottom: .5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin: 0;
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
         }
     }
 
@@ -165,6 +185,16 @@
         // get the content on top on hover:
         position: relative;
         z-index: 10;
+
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            padding: 1.5rem .5rem;
+        }
     }
 
     &__icon {
@@ -173,7 +203,14 @@
         margin-right: 2rem;
         // uses the color of the link, inherits
         fill: currentColor;
+
+        @media only screen and (max-width: $bp-small) {
+            margin: 0 0 .7rem 0;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
+
 }
 
 // Legal
@@ -182,6 +219,10 @@
     color: var(--color-grey-light-1);
     text-align: center;
     padding: 2.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 }
 
 // Gallery
@@ -203,12 +244,16 @@
     border-bottom: var(--main-border);
 
     &__heading {
-
         font-size: 2.25rem;
         font-weight: 300;
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+        }
     }
 
     &__stars {
@@ -248,17 +293,28 @@
         align-items: center;
         justify-content: center;
 
+        @media only screen and (max-width: $bp-small) {
+            padding: 0 1.5rem;
+        }
+
     }
 
     &__rating-average {
         font-size: 2.25rem;
         font-kerning: 300;
         margin-bottom: -3px;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+        }
     }
 
     &__rating-count {
         font-size: .8rem;
         text-transform: uppercase;
+        @media only screen and (max-width: $bp-small) {
+            font-size: .8rem;
+        }
     }
 }
 
@@ -368,7 +424,9 @@
 
     }
 
-    &__friends {}
+    &__friends {
+        display: flex;
+    }
 
     &__photo {
         box-sizing: content-box;
@@ -379,7 +437,7 @@
 
         &:not(:last-child) {
 
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
 
     }
@@ -394,6 +452,16 @@
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin: 2rem;;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin: 2rem 0;
+    }
 
     &__text {
         z-index: 2;
@@ -463,6 +531,10 @@
     padding: 3.5rem 0;
     text-align: center;
 
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0;
+    }
+
     &__book-now {
         text-transform: uppercase;
         font-size: 2rem;
@@ -483,7 +555,7 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    
+
     &>* {
         display: inline-block;
         transition: all .3s;
